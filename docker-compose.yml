@@ -1,0 +1,12 @@
+version: '3'
+services:
+  hass-configurator:
+    container_name: configurator
+    image: causticlab/hass-configurator-docker:latest
+    volumes:
+      - ./config:/config
+      - /docker/home-assistant/app_config:/hass-config
+    restart: always
+    ports:
+      - "3218:3218/tcp"
+      
