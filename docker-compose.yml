@@ -5,7 +5,7 @@ services:
     image: causticlab/hass-configurator-docker:latest
     volumes:
       - ./config:/config
-      - /docker/home-assistant/app_config:/hass-config
+      - docker/home-assistant/config:/hass-config
     restart: always
     ports:
       - "3218:3218/tcp"
